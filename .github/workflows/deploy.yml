@@ -3,7 +3,10 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # 或 master，根据你的仓库默认分支来定
+
+permissions:
+  contents: write
 
 jobs:
   build-deploy:
