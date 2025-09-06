@@ -3,7 +3,7 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main  # 或者是 master，根据你的默认分支来改
+      - main  # 或者 master，根据你的默认分支来改
 
 jobs:
   build-deploy:
@@ -15,12 +15,13 @@ jobs:
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
-       
+
       - name: Build site
         run: hugo --minify
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
