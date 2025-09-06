@@ -3,7 +3,8 @@ name: Hugo Build & Deploy
 on:
   push:
     branches:
-      - main
+      - gh-pages
+
 
 jobs:
   build-deploy:
