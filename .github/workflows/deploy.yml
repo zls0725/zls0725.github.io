@@ -22,6 +22,7 @@ jobs:
           hugo-version: '0.121.1'
           extended: true
 
+
       - name: Build site
         run: hugo --minify -D
 
