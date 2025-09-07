@@ -30,9 +30,9 @@ jobs:
           cache: 'npm'
       - name: Install Dependencies
         run: |
-          if [ -f package.json ]; then npm ci; else echo "No package.json found, skipping npm install"; fi
+          if [ -f package.json ]; then npm ci; else echo "No package.json found, creating minimal package.json"; npm init -y; npm install postcss postcss-cli autoprefixer; fi
       - name: Build
-        run: hugo --minify -D --verbose # 添加 --verbose 打印详细构建日志
+        run: hugo --minify -D --verbose
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
