@@ -1,42 +1,33 @@
-name: Deploy Hugo to GitHub Pages
+name: Deploy Hugo site to GitHub Pages
+
 on:
   push:
     branches:
-      - main
+      - main  # 如果你的默认分支是 master，请改成 master
+
 permissions:
   contents: write
+
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.134.2'
+          hugo-version: '0.121.1'
           extended: true
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - name: Install Dependencies
-        run: |
-          [ -f package.json ] && npm ci || { npm init -y && npm install postcss postcss-cli autoprefixer --save-dev; }
-      - name: Build
+
+      - name: Build site
         run: hugo --minify -D
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-          force_orphan: true
-      - name: Debug
-        if: failure()
-        run: |
-          echo "Build failed:"
-          ls -la public/ || echo "Public directory not found"
-          cat config.toml || echo "config.toml not found"
