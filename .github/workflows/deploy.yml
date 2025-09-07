@@ -3,7 +3,11 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
+<<<<<<< HEAD
       - gh-pages
+=======
+      - main  # 或者 master，根据你的默认分支来改
+>>>>>>> 2d8a1a704cdb32914480853bdafcf458d7ebdbbd
 
 jobs:
   build-deploy:
@@ -15,8 +19,11 @@ jobs:
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
+<<<<<<< HEAD
         with:
           hugo-version: '0.121.1'
+=======
+>>>>>>> 2d8a1a704cdb32914480853bdafcf458d7ebdbbd
 
       - name: Build site
         run: hugo --minify
@@ -27,6 +34,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+<<<<<<< HEAD
 name: Deploy Hugo site to GitHub Pages
 
 on:
@@ -140,3 +148,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
 
+=======
+>>>>>>> 2d8a1a704cdb32914480853bdafcf458d7ebdbbd
