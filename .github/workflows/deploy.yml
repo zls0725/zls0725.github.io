@@ -30,21 +30,11 @@ jobs:
           cache: 'npm'
       - name: Install Dependencies
         run: |
-          if [ -f package.json ]; then npm ci; else echo "No package.json found, creating minimal package.json"; npm init -y; npm install postcss postcss-cli autoprefixer; fi
+          if [ -f package.json ]; then npm ci; else echo "Creating package.json"; npm init -y; npm install postcss postcss-cli autoprefixer --save-dev; fi
       - name: Build
-        run: hugo --minify -D --verbose
+        run: hugo --minify -D --verbose --panicOnWarning
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
-          force_orphan: true
-      - name: Debug
-        if: failure()
-        run: |
-          echo "Build failed. Checking directories and files:"
-          ls -la public/ || echo "Public directory not found"
-          ls -la themes/ || echo "Themes directory not found"
-          cat config.toml || echo "config.toml not found"
-          cat package.json || echo "package.json not found"
+         
