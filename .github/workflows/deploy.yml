@@ -3,11 +3,10 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-<<<<<<< HEAD
-      - gh-pages
-=======
-      - main  # 或者 master，根据你的默认分支来改
->>>>>>> 2d8a1a704cdb32914480853bdafcf458d7ebdbbd
+      - main  # 如果你的默认分支是 master，请改成 master
+
+permissions:
+  contents: write
 
 jobs:
   build-deploy:
@@ -19,14 +18,12 @@ jobs:
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
-<<<<<<< HEAD
         with:
-          hugo-version: '0.121.1'
-=======
->>>>>>> 2d8a1a704cdb32914480853bdafcf458d7ebdbbd
+          hugo-version: '0.121.1'  # 可改为 'latest'，但建议用稳定版本
+          extended: true
 
       - name: Build site
-        run: hugo --minify
+        run: hugo --minify -D
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -34,119 +31,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-<<<<<<< HEAD
-name: Deploy Hugo site to GitHub Pages
-
-on:
-  push:
-    branches:
-      - master
-
-permissions:
-  contents: write
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build
-        run: hugo --minify -D
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-name: Deploy Hugo site to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-
-      - name: Build
-        run: hugo --minify -D
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-name: Deploy Hugo site to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-
-      - name: Build
-        run: hugo --minify -D
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-name: Deploy Hugo site to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-
-      - name: Build
-        run: hugo --minify -D
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-
-=======
->>>>>>> 2d8a1a704cdb32914480853bdafcf458d7ebdbbd
