@@ -1,33 +1,44 @@
-name: Deploy Hugo to GitHub Pages
+name: Deploy Hugo site to GitHub Pages
+
 on:
   push:
     branches:
-      - main
-permissions:
-  contents: write
+      - main  # 你的源码分支，确认是不是 main
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
+
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.134.2'
           extended: true
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
+
       - name: Install Dependencies
         run: |
-          [ -f package.json ] && npm ci || { npm init -y && npm install postcss postcss-cli autoprefixer --save-dev; }
+          if [ -f package.json ]; then
+            npm ci
+          else
+            npm init -y
+            npm install postcss postcss-cli autoprefixer --save-dev
+          fi
+
       - name: Build
         run: hugo --minify -D --verbose
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -35,11 +46,12 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           force_orphan: true
+
       - name: Debug
         if: failure()
         run: |
-          echo "Build failed:"
+          echo "Build failed. Checking files:"
           ls -la public/ || echo "Public directory not found"
           ls -la themes/ || echo "Themes directory not found"
-          cat config.toml || echo "config.toml not found"
-          cat package.json || echo "package.json not found"
+          test -f config.toml && head -n 20 config.toml || echo "config.toml not found"
+          test -f package.json && cat package.json || echo "package.json not found"
