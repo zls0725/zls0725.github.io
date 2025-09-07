@@ -10,10 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: true # 如果你的 Blowfish 主题使用 Git 子模块
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.134.2' # 使用最新稳定版
+          hugo-version: '0.134.2'
           extended: true
       - name: Build
         run: hugo --minify -D
@@ -23,3 +25,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+          force_orphan: true # 确保 gh-pages 分支干净
+      - name: Debug
+        if: failure()
+        run: |
+          echo "Build failed. Checking public directory:"
+          ls -la public/
