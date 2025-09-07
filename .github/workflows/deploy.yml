@@ -18,16 +18,8 @@ jobs:
         with:
           hugo-version: '0.134.2'
           extended: true
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-      - name: Install Dependencies
-        run: |
-          [ -f package.json ] && npm ci || { npm init -y && npm install postcss postcss-cli autoprefixer --save-dev; }
       - name: Build
-        run: hugo --minify -D --verbose
+        run: hugo --minify -D
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -40,6 +32,4 @@ jobs:
         run: |
           echo "Build failed:"
           ls -la public/ || echo "Public directory not found"
-          ls -la themes/ || echo "Themes directory not found"
           cat config.toml || echo "config.toml not found"
-          cat package.json || echo "package.json not found"
