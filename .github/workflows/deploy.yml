@@ -23,12 +23,14 @@ jobs:
           echo "Checking submodules..."
           git submodule update --init --recursive || echo "No submodules found or failed to initialize"
           ls -la themes/ || echo "Themes directory not found"
-      - name: Install Node.js (for Blowfish SCSS)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm' # 缓存 npm 依赖加速构建
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          if [ -f package.json ]; then npm ci; else echo "No package.json found, skipping npm install"; fi
       - name: Build
         run: hugo --minify -D
       - name: Deploy
@@ -41,9 +43,8 @@ jobs:
       - name: Debug
         if: failure()
         run: |
-          echo "Build failed. Checking public directory:"
+          echo "Build failed. Checking directories and files:"
           ls -la public/ || echo "Public directory not found"
-          echo "Checking Hugo config:"
-          cat config.toml || echo "config.toml not found"
-          echo "Checking themes directory:"
           ls -la themes/ || echo "Themes directory not found"
+          cat config.toml || echo "config.toml not found"
+          cat package.json || echo "package.json not found"
