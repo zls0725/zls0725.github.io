@@ -11,12 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true # 如果你的 Blowfish 主题使用 Git 子模块
+          submodules: true
+          fetch-depth: 0 # 确保拉取完整历史和子模块
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.134.2'
           extended: true
+      - name: Check Submodules
+        run: |
+          git submodule update --init --recursive
+          ls -la themes/
       - name: Build
         run: hugo --minify -D
       - name: Deploy
@@ -25,9 +30,11 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-          force_orphan: true # 确保 gh-pages 分支干净
+          force_orphan: true
       - name: Debug
         if: failure()
         run: |
           echo "Build failed. Checking public directory:"
           ls -la public/
+          echo "Checking Hugo config:"
+          cat config.toml
