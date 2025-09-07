@@ -1,35 +1,40 @@
-name: Deploy Hugo to GitHub Pages
-on:
-  push:
-    branches:
-      - main
-permissions:
-  contents: write
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+1 file changed
++1
+-11
+lines changed
+
+ 
+‎.github/workflows/deploy.yml
++1
+-11
+Lines changed: 1 addition & 11 deletions
+Original file line number	Diff line number	Diff line change
+@@ -18,16 +18,8 @@ jobs:
         with:
           hugo-version: '0.134.2'
           extended: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Install Dependencies
+        run: |
+          [ -f package.json ] && npm ci || { npm init -y && npm install postcss postcss-cli autoprefixer --save-dev; }
       - name: Build
+        run: hugo --minify -D --verbose
         run: hugo --minify -D
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
-          force_orphan: true
-      - name: Debug
-        if: failure()
+@@ -40,6 +32,4 @@ jobs:
         run: |
           echo "Build failed:"
           ls -la public/ || echo "Public directory not found"
+          ls -la themes/ || echo "Themes directory not found"
           cat config.toml || echo "config.toml not found"
+          cat package.json || echo "package.json not found"
+0 commit comments
+Comments
+0
+ (0)
