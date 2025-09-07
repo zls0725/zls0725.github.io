@@ -1,33 +1,44 @@
-name: Deploy Hugo to GitHub Pages
+name: Deploy Hugo site to GitHub Pages
+
 on:
   push:
     branches:
-      - main
-permissions:
-  contents: write
+      - main  # 你要部署的分支，确认是不是 main
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: true  # 确保 themes 被拉下来
           fetch-depth: 0
+
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.134.2'
           extended: true
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
+
       - name: Install Dependencies
         run: |
-          if [ -f package.json ]; then npm ci; else npm init -y && npm install postcss postcss-cli autoprefixer --save-dev; fi
+          if [ -f package.json ]; then
+            npm ci
+          else
+            npm init -y
+            npm install postcss postcss-cli autoprefixer --save-dev
+          fi
+
       - name: Build
-        run: hugo --minify -D --verbose
+        run: hugo --minify -D --verbose --panicOnWarning
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -35,6 +46,7 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           force_orphan: true
+
       - name: Debug
         if: failure()
         run: |
