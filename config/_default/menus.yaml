@@ -1,0 +1,10 @@
+main:
+  - name: "中文"
+    url: "/"
+    weight: 1
+  - name: "English"
+    url: "/en/"
+    weight: 2
+  - name: "Español"
+    url: "/es/"
+    weight: 3
