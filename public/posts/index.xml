@@ -1,24 +1,170 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Henry 的博客</title>
-    <link>http://localhost:52280/posts/</link>
-    <description>Recent content in Posts on Henry 的博客</description>
+    <title>感恩复盘-000 on 香港Henry的博客</title>
+    <link>http://localhost:55573/posts/</link>
+    <description>Recent content in 感恩复盘-000 on 香港Henry的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 </copyright>
-    <lastBuildDate>Mon, 08 Sep 2025 09:54:31 +0800</lastBuildDate><atom:link href="http://localhost:52280/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Sep 2025 09:54:31 +0800</lastBuildDate><atom:link href="http://localhost:55573/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>感恩复盘-000</title>
-      <link>http://localhost:52280/posts/hello-world/</link>
-      <pubDate>Mon, 08 Sep 2025 09:54:31 +0800</pubDate>
+      <link>http://localhost:55573/posts/hugo%E9%83%A8%E7%BD%B2vercel/</link>
+      <pubDate>Sun, 07 Sep 2025 18:05:00 -0700</pubDate>
       
-      <guid>http://localhost:52280/posts/hello-world/</guid>
-      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;欢迎来到我的 Hugo + Blowfish 网站！  
-这是一个使用 GitHub Pages 自动部署的静态博客。  
-你可以在这里发布文章、项目、笔记，甚至是作品集。
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <guid>http://localhost:55573/posts/hugo%E9%83%A8%E7%BD%B2vercel/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;文章标题 
+    &lt;div id=&#34;文章标题&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e6%96%87%e7%ab%a0%e6%a0%87%e9%a2%98&#34; aria-label=&#34;&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;这里是正文内容，支持 Markdown 语法&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>感恩复盘-000</title>
+      <link>http://localhost:55573/posts/%E6%B5%8B%E8%AF%95%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 07 Sep 2025 17:04:50 +0800</pubDate>
+      
+      <guid>http://localhost:55573/posts/%E6%B5%8B%E8%AF%95%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;les changed, 36 deletions(-)                                                                                                                                                                                                                                                                                                 &lt;/p&gt;
+&lt;p&gt; delete mode 100644 public/404.html &lt;/p&gt;
+&lt;p&gt; delete mode 100644 public/categories/index.html &lt;/p&gt;
+&lt;p&gt; delete mode 100644 public/categories/index.xml &lt;/p&gt;
+&lt;p&gt; delete mode 100644 public/index.html &lt;/p&gt;
+&lt;p&gt; delete mode 100644 public/index.xml &lt;/p&gt;
+&lt;p&gt; delete mode 100644 public/page/1/index.html &lt;/p&gt;
+&lt;p&gt; delete mode 100644 public/sitemap.xml &lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>你好，世界</title>
+      <link>http://localhost:55573/posts/hello-world/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:55573/posts/hello-world/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;这是我第一篇博客文章，欢迎来到我的网站！ 
+    &lt;div id=&#34;这是我第一篇博客文章欢迎来到我的网站&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%bf%99%e6%98%af%e6%88%91%e7%ac%ac%e4%b8%80%e7%af%87%e5%8d%9a%e5%ae%a2%e6%96%87%e7%ab%a0%e6%ac%a2%e8%bf%8e%e6%9d%a5%e5%88%b0%e6%88%91%e7%9a%84%e7%bd%91%e7%ab%99&#34; aria-label=&#34;&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;title: &amp;ldquo;Hello World&amp;rdquo;
+date: 2025-09-07T11:04:13+08:00
+draft: true 
+    &lt;div id=&#34;draft-true&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#draft-true&#34; aria-label=&#34;&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>感恩复盘-000</title>
+      <link>http://localhost:55573/posts/obsidian%E5%A4%9A%E7%AB%AF%E4%BA%91%E5%90%8C%E6%AD%A5-1/</link>
+      <pubDate>Thu, 04 Sep 2025 18:32:00 +0000</pubDate>
+      
+      <guid>http://localhost:55573/posts/obsidian%E5%A4%9A%E7%AB%AF%E4%BA%91%E5%90%8C%E6%AD%A5-1/</guid>
+      <description>&lt;p&gt;鉴于你在香港，预算低，技术能力一般，以下针对 Obsidian 同步方法进行详细对比，重点分析 &lt;strong&gt;安全性&lt;/strong&gt;、&lt;strong&gt;可靠性&lt;/strong&gt;、&lt;strong&gt;高效性&lt;/strong&gt;、&lt;strong&gt;成本&lt;/strong&gt; 和 &lt;strong&gt;易用性&lt;/strong&gt;，并推荐最适合你的方案。表格对比涵盖主流同步方法，包括 &lt;strong&gt;Obsidian Sync&lt;/strong&gt;、&lt;strong&gt;Remotely Save + Cloudflare R2&lt;/strong&gt;、&lt;strong&gt;Remotely Save + 阿里云 OSS&lt;/strong&gt;、&lt;strong&gt;Git 同步&lt;/strong&gt;、&lt;strong&gt;iCloud&lt;/strong&gt;、和 &lt;strong&gt;WebDAV（坚果云/Nextcloud）&lt;/strong&gt;。最后提供明确推荐和配置建议。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:55573/posts/%E7%BD%91%E7%AB%99%E7%9B%AE%E5%BD%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:55573/posts/%E7%BD%91%E7%AB%99%E7%9B%AE%E5%BD%95/</guid>
+      <description>&lt;p&gt;my-site/
+├── archetypes/
+│   └── default.md                # 文章模板
+├── assets/
+│   ├── css/
+│   │   └── custom.css           # 自定義 CSS（中文字體、團體圖標樣式）
+│   └── js/
+├── config.toml                   # 主配置文件（見上方）
+├── content/                      # 多語言內容
+│   ├── zh-CN/                   # 簡體中文內容（主語言，無 URL 前綴）
+│   │   ├── _index.md            # 首頁（title: &amp;ldquo;香港Henry的博客&amp;rdquo;）
+│   │   ├── posts/
+│   │   │   ├── _index.md        # 博客列表頁
+│   │   │   ├── trump-stablecoin-bill-0011.md # 文章：特朗普穩定幣法案
+│   │   │   ├── digital-sovereignty-0007.md   # 文章：數據主權與多語言寫作
+│   │   │   ├── slow-living-0005.md           # 文章：慢生活
+│   │   │   └── sop-system-0003.md            # 文章：SOP 系統指南
+│   │   ├── about/
+│   │   │   └── _index.md        # 關於頁面
+│   │   └── categories/
+│   │       ├── 必看精选.md      # 分類頁
+│   │       ├── 热门文章.md
+│   │       └── 实用教程.md
+│   ├── en/                      # 英文內容（URL 前綴: /en/）
+│   │   ├── _index.md            # 首頁（英文）
+│   │   ├── posts/
+│   │   │   ├── trump-stablecoin-bill-0011.md
+│   │   │   ├── digital-sovereignty-0007.md
+│   │   │   ├── slow-living-0005.md
+│   │   │   └── sop-system-0003.md
+│   │   └── about/
+│   │       └── _index.md
+│   ├── es/                      # 西班牙文內容（URL 前綴: /es/）
+│   │   ├── _index.md
+│   │   ├── posts/
+│   │   │   ├── trump-stablecoin-bill-0011.md
+│   │   │   ├── digital-sovereignty-0007.md
+│   │   │   ├── slow-living-0005.md
+│   │   │   └── sop-system-0003.md
+│   │   └── about/
+│   │       └── _index.md
+├── data/
+│   └── menu.toml                # 自定義菜單數據（可選）
+├── i18n/                        # 翻譯文件
+│   ├── zh-CN.toml               # 簡體中文翻譯
+│   │   # 示例：
+│   │   # [menu.home]
+│   │   # other = &amp;ldquo;首页&amp;rdquo;
+│   │   # [read_more]
+│   │   # other = &amp;ldquo;阅读更多&amp;rdquo;
+│   ├── en.toml                  # 英文翻譯
+│   └── es.toml                  # 西班牙文翻譯
+├── layouts/
+│   └── shortcodes/
+│       └── groups.html          # 自定義短代碼（團體圖標）
+├── public/                      # 構建輸出（自動生成）
+│   ├── index.html              # 中文首頁
+│   ├── en/                     # 英文靜態文件
+│   └── es/                     # 西班牙文靜態文件
+├── static/                      # 靜態資產
+│   ├── images/
+│   │   ├── favicon.ico
+│   │   ├── default.jpg
+│   │   ├── CUHK.webp           # HEO_GROUP_ICONS
+│   │   ├── PolyU.webp
+│   │   ├── HKU.webp
+│   │   ├── HKUST.webp
+│   │   └── &amp;hellip;                # 其他團體圖標
+│   └── wechat-qr.jpg           # 微信二維碼（HEO_SOCIAL_CARD_URL）
+├── themes/
+│   └── blowfish/               # Blowfish 主題（Git 子模塊）
+└── .git/
+└── modules/
+└── blowfish/&lt;/p&gt;</description>
       
     </item>
     

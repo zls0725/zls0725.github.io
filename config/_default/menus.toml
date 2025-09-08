@@ -21,24 +21,24 @@
   weight = 15
 
 [[main]]
-  name = "示例"
+  name = "往期整理"
   weight = 20
 
 [[main]]
-  name = "功能示例"
-  parent = "示例"
+  name = "历史归类"
+  parent = "往期整理"
   pageRef = "samples"
   weight = 16
 
 [[main]]
-  name = "模板示例"
-  parent = "示例"
+  name = "文章分类"
+  parent = "往期整理"
   pageRef = "examples"
   weight = 30
 
 [[main]]
-  name = "部署指南"
-  parent = "示例"
+  name = "文章标签"
+  parent = "往期整理"
   pageRef = "guides"
   weight = 40
 
@@ -60,7 +60,7 @@
 [[main]]
   identifier = "twitter"
   pre = "x-twitter"
-  url = "https://twitter.com/burufugu"
+  url = "https://twitter.com/hkhenry21"
   weight = 200
 
 #[[main]]
@@ -70,9 +70,15 @@
 #  url = "https://masto.ai/@blowfish"
 
 [[main]]
+identifier = "YouTube"
+  pre = "YouTube"
+  weight = 300
+  url = "https://www.youtube.com/@hkhenry21"
+
+[[main]]
   identifier = "github"
   pre = "github"
-  url = "https://github.com/nunocoracao/blowfish"
+  url = "https://github.com/nunocoracao/zls0725"
   weight = 400
 
 

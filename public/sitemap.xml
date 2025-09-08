@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <url>
-    <loc>http://localhost:52280/posts/</loc>
-    <lastmod>2025-09-08T09:54:31+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:52280/</loc>
-    <lastmod>2025-09-08T09:54:31+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:52280/posts/hello-world/</loc>
-    <lastmod>2025-09-08T09:54:31+08:00</lastmod>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://localhost:55573/zh/sitemap.xml</loc>
+    
+      <lastmod>2025-09-08T09:54:31+08:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:55573/languages/sitemap.xml</loc>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:55573/en/sitemap.xml</loc>
+    
+      <lastmod>2025-09-08T09:54:31+08:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:55573/es/sitemap.xml</loc>
+    
+      <lastmod>2025-09-07T18:05:00-07:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>
