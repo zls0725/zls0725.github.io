@@ -7,20 +7,21 @@ categories:
   - 博客
 tags:
   - gratitude-diary
-description: "欢迎体香港Henry的博客，分享留学移民、保险投资、家庭办公室等内容"
+description: 文章的简短描述，用于 SEO 和社交媒体分享
 slug:
 featuredImage: 网页图片封面
 author: 香港Henry
 keywords:
 weight: 文章的排序权重（值越小越靠前），用于置顶或自定义排序。
 aliases:
-  - 旧 URL 的别名，用于重定向（当文章 URL 变更时）。
+  
 hidden: false 表示在文章页中显示封面图
 一句话总结: 重点
 created: 2025-09-08T09:54
 updated: 2025-09-08T09:54
 ---
-💼 财富管理 | 商业洞察
-📊 资讯分享 | 行业干货
-⭐️ 分享生活｜广交好友
-📈 关注斜杠青年开启新视野
+```
+欢迎来到我的 Hugo + Blowfish 网站！  
+这是一个使用 GitHub Pages 自动部署的静态博客。  
+你可以在这里发布文章、项目、笔记，甚至是作品集。
+```
