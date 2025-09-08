@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Henry 的博客</title>
+    <link>http://localhost:52280/posts/</link>
+    <description>Recent content in Posts on Henry 的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>© 2025 </copyright>
+    <lastBuildDate>Mon, 08 Sep 2025 09:54:31 +0800</lastBuildDate><atom:link href="http://localhost:52280/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>感恩复盘-000</title>
+      <link>http://localhost:52280/posts/hello-world/</link>
+      <pubDate>Mon, 08 Sep 2025 09:54:31 +0800</pubDate>
+      
+      <guid>http://localhost:52280/posts/hello-world/</guid>
+      <description>&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;欢迎来到我的 Hugo + Blowfish 网站！  
+这是一个使用 GitHub Pages 自动部署的静态博客。  
+你可以在这里发布文章、项目、笔记，甚至是作品集。
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

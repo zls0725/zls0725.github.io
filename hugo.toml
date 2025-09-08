@@ -1,0 +1,9 @@
+baseURL = "http://localhost:51373"
+languageCode = "zh-CN"
+title = "Henry 的博客"
+theme = "blowfish"
+
+[params]
+  homepage.layout = "background"
+  defaultBackgroundImage = "/img/background.svg"
+  layoutBackgroundBlur = true

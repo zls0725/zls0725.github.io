@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>http://localhost:52280/posts/</loc>
+    <lastmod>2025-09-08T09:54:31+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:52280/</loc>
+    <lastmod>2025-09-08T09:54:31+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:52280/posts/hello-world/</loc>
+    <lastmod>2025-09-08T09:54:31+08:00</lastmod>
+  </url>
+</urlset>
